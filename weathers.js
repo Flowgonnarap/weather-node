@@ -13,7 +13,7 @@ let temperatureChoice = prompt("Please type your temperature choice('F' or 'C'):
 
 weather.find({search: `${city}, ${country}`, degreeType: `${temperatureChoice}`}, function(err, result) {
     if(err) console.log(err);
-    let location = result[0].location.name; //works
+    let location = result[0].location.name; 
     let skytoday = result[1].current.skytext; 
     let date = result[1].current.date
     let temperature = result[1].current.temperature;
